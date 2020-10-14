@@ -7,12 +7,29 @@
     <pages>
       <Page title="{i18n>title}">
         <content>
-          <l:VerticalLayout>
-            <Label text="{i18n>firstName}" class="sapUiTinyMarginTop"></Label>
-            <Text text="{/firstName}"></Text>
-            <Label text="{i18n>lastName}" class="sapUiTinyMarginTop"></Label>
-            <Text text="{/lastName}"></Text>
-          </l:VerticalLayout>
+          <Panel headerText="{i18n>myInfo}" class="sapUiResponsiveMargin" width="auto">
+
+            <content>
+              <l:VerticalLayout>
+                <Label text="Email" labelFor="emailInput"/>
+								<Input id="emailInput" class="sapUiSmallMarginBottom" type="Email" placeholder="Enter email ..."
+										valueStateText="Email must be a valid email address." value="{ path : '/email'}" change="onChange"/>
+
+
+                <Label text="{i18n>firstName}" class="sapUiTinyMarginTop"></Label>
+                <Text text="{/firstName}"></Text>
+                <Label text="{i18n>lastName}" class="sapUiTinyMarginTop"></Label>
+                <Text text="{/lastName}"></Text>
+
+                <Label text="{i18n>address}" class="sapUiTinyMarginTop"/>
+                <Text text="{/address/street}"/>
+                <Text text="{/address/city}"/>
+                <Text text="{/address/zip}"/>
+                <Text text="{/address/country}"/>
+              </l:VerticalLayout>
+            </content>
+
+          </Panel>
         </content>
       </Page>
     </pages>
