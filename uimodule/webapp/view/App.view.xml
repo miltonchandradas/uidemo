@@ -12,20 +12,24 @@
             <content>
               <l:VerticalLayout>
                 <Label text="Email" labelFor="emailInput"/>
-								<Input id="emailInput" class="sapUiSmallMarginBottom" type="Email" placeholder="Enter email ..."
-										valueStateText="Email must be a valid email address." value="{ path : '/email'}" change="onChange"/>
+                <Input id="emailInput" class="sapUiSmallMarginBottom" type="Email" placeholder="Enter email ..." valueStateText="Email must be a valid email address." value="{ path : '/email'}" change="onChange"/>
 
 
-                <Label text="{i18n>firstName}" class="sapUiTinyMarginTop"></Label>
+                <Label text="{i18n>firstName}" class="sapUiMediumMarginTop"></Label>
                 <Text text="{/firstName}"></Text>
                 <Label text="{i18n>lastName}" class="sapUiTinyMarginTop"></Label>
                 <Text text="{/lastName}"></Text>
 
-                <Label text="{i18n>address}" class="sapUiTinyMarginTop"/>
+                <Label text="{i18n>address}" class="sapUiMediumMarginTop"/>
                 <Text text="{/address/street}"/>
                 <Text text="{/address/city}"/>
                 <Text text="{/address/zip}"/>
                 <Text text="{/address/country}"/>
+
+                <Label text="{i18n>hobbies}" class="sapUiMediumMarginTop"/>
+                <List items="{path: '/hobbies'}">
+                  <StandardListItem title="{hobby}"></StandardListItem>
+                </List>
               </l:VerticalLayout>
             </content>
 

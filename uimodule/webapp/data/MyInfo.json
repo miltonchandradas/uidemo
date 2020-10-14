@@ -9,5 +9,10 @@
     "city": "Alpharetta",
     "zip": "30004",
     "country": "US"
-  }
+  },
+  "hobbies": [
+    { "hobby": "tennis" },
+    { "hobby": "soccer" },
+    { "hobby": "chess" }
+  ]
 }
