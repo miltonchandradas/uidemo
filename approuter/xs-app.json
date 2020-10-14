@@ -1,0 +1,8 @@
+{
+  "welcomeFile": "comsapui5demo/",
+  "authenticationMethod": "none",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": []
+}
