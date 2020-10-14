@@ -30,6 +30,8 @@ server:
         destinations:
           - name: northwind_api
             url: https://services.odata.org
+          - name: odatav4_api
+            url: https://ic-cf-2020-team-448-team448-final4-srv.cfapps.eu10.hana.ondemand.com
 builder:
   customTasks:
     -  name: "ui5-task-zipper"

@@ -16,6 +16,13 @@
         "settings": {
           "localUri": "localService//V2/Northwind/Northwind.svc/metadata.xml"
         }
+      },
+      "odataV4Service": {
+        "uri": "/catalog/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
       }
     }
   },
@@ -74,6 +81,13 @@
           "preload": true
         },
         "dataSource": "mainService"
+      },
+      "odataV4Model": {
+        "type": "sap.ui.model.odata.v4.ODataModel",
+        "settings": {
+					"synchronizationMode": "None"
+				},
+        "dataSource": "odataV4Service"
       }
     },
     "resources": {

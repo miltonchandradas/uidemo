@@ -9,10 +9,16 @@
         <content>
 
           <Panel headerText="Northwind OData Service" class="sapUiResponsiveMargin sapUiMediumMarginBottom" width="auto">
-
             <content>
               <l:VerticalLayout>
-                <Table items="{northwindModel>/Products}" >
+
+                <Label text="OData V4 Industries" class="sapUiMediumMarginBottom"></Label>
+                <List items="{odataV4Model>/Industry}" class="sapUiMediumMarginBottom">
+                  <StandardListItem title="{odataV4Model>IndustryName}"></StandardListItem>
+                </List>
+
+                <Label text="OData V2 Northwind" class="sapUiMediumMarginBottom"></Label>
+                <Table items="{northwindModel>/Products}" class="sapUiMediumMarginTop">
 
 
                   <columns>
@@ -59,7 +65,7 @@
 
             <content>
               <l:VerticalLayout>
-                <Table items="{/}" >
+                <Table items="{/}">
 
 
                   <columns>
@@ -74,7 +80,7 @@
                     </Column>
                   </columns>
                   <items>
-                    <ColumnListItem type="Active"  press=".onItemPress" >
+                    <ColumnListItem type="Active" press=".onItemPress">
                       <cells>
 
                         <Text text="{firstName}" />

@@ -6,6 +6,12 @@
   },
   "routes": [
     {
+      "source": "^/catalog/(.*)$",
+      "authenticationType": "none",
+      "destination": "odatav4_api",
+      "csrfProtection": false
+    },
+    {
       "source": "^/V2/(.*)$",
       "authenticationType": "none",
       "destination": "northwind_api",
