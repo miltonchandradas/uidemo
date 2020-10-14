@@ -7,6 +7,54 @@
     <pages>
       <Page title="{i18n>title}">
         <content>
+
+          <Panel headerText="Northwind OData Service" class="sapUiResponsiveMargin sapUiMediumMarginBottom" width="auto">
+
+            <content>
+              <l:VerticalLayout>
+                <Table items="{northwindModel>/Products}" >
+
+
+                  <columns>
+                    <Column>
+                      <Text text="ID" />
+                    </Column>
+                    <Column>
+                      <Text text="Product Name" />
+                    </Column>
+                    <Column>
+                      <Text text="Quantity / Unit" />
+                    </Column>
+                    <Column>
+                      <Text text="Unit Price" />
+                    </Column>
+                    <Column>
+                      <Text text="Units in Stock" />
+                    </Column>
+                    <Column>
+                      <Text text="Reorder Level" />
+                    </Column>
+                  </columns>
+                  <items>
+                    <ColumnListItem >
+                      <cells>
+
+                        <Text text="{northwindModel>ProductID}" />
+                        <Text text="{northwindModel>ProductName}" />
+                        <Text text="{northwindModel>QuantityPerUnit}" />
+                        <Text text="{northwindModel>UnitPrice}" />
+                        <Text text="{northwindModel>UnitsInStock}" />
+                        <Text text="{northwindModel>ReorderLevel}" />
+
+                      </cells>
+                    </ColumnListItem>
+                  </items>
+
+                </Table>
+              </l:VerticalLayout>
+            </content>
+          </Panel>
+
           <Panel headerText="{i18n>myInfo}" class="sapUiResponsiveMargin sapUiMediumMarginBottom" width="auto">
 
             <content>
