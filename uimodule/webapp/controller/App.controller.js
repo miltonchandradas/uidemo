@@ -24,6 +24,13 @@ sap.ui.define(
         oInput.setValueState(sValueState);
       },
 
+      onItemPress: function (oEvent) {
+        let src = oEvent.getSource();
+        let sPath = src.getBindingContext().sPath;
+
+        this.byId("panelAddress").bindElement({ path: sPath });
+      },
+
       // PRIVATE FUNCTIONS
       _validateInput: function (sValue) {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

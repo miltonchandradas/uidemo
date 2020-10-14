@@ -1,37 +1,67 @@
-{
-  "firstName": "Milton",
-  "lastName": "Chandradas",
-  "email": "milton@sap.com",
-  "city": "Atlanta",
-  "company": "SAP",
-  "address": {
-    "street": "8000 Avalon Blvd",
-    "city": "Alpharetta",
-    "zip": "30004",
-    "country": "US"
+[
+  {
+    "firstName": "Milton",
+    "lastName": "Chandradas",
+    "email": "milton@sap.com",
+    "city": "Atlanta",
+    "company": "SAP",
+    "address": {
+      "street": "8000 Avalon Blvd",
+      "city": "Alpharetta",
+      "zip": "30004",
+      "country": "US"
+    },
+    "hobbies": [
+      {
+        "hobby": "tennis",
+        "skill": "professional",
+        "ranking": 1234,
+        "highestRanking": 12,
+        "status": "active",
+        "prizeMoney": 12500000,
+        "currencyCode": "USD"
+      },
+      {
+        "hobby": "soccer",
+        "skill": "professional",
+        "prizeMoney": 2500000,
+        "ranking": 5678,
+        "status": "retired",
+        "highestRanking": 36,
+        "currencyCode": "USD"
+      },
+      {
+        "hobby": "chess",
+        "skill": "amateur"
+      }
+    ]
   },
-  "hobbies": [
-    {
-      "hobby": "tennis",
-      "skill": "professional",
-      "ranking": 1234,
-      "highestRanking": 12,
-      "status": "active",
-      "prizeMoney": 12500000,
-      "currencyCode": "USD"
+  {
+    "firstName": "Nicolai",
+    "lastName": "Geburek",
+    "email": "nicolai@sap.com",
+    "city": "Walldorf",
+    "company": "SAP",
+    "address": {
+      "street": "534 Beethoven Strasse",
+      "city": "Walldorf",
+      "zip": "30004",
+      "country": "DE"
     },
-    {
-      "hobby": "soccer",
-      "skill": "professional",
-      "prizeMoney": 2500000,
-      "ranking": 5678,
-      "status": "retired",
-      "highestRanking": 36,
-      "currencyCode": "USD"
-    },
-    {
-      "hobby": "chess",
-      "skill": "amateur"
-    }
-  ]
-}
+    "hobbies": [
+      {
+        "hobby": "rugby",
+        "skill": "professional",
+        "ranking": 12,
+        "highestRanking": 2,
+        "status": "active",
+        "prizeMoney": 12500000,
+        "currencyCode": "USD"
+      },
+      {
+        "hobby": "chess",
+        "skill": "amateur"
+      }
+    ]
+  }
+]
