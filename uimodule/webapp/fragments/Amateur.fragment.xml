@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<StandardListItem id="amateur" icon="sap-icon://badge" title="{hobby} ({skill})" 
+    info="{i18n>noprizemoney}" type="Active" infoState="Error"
+		press=".onItemSelected"></StandardListItem>
+</core:FragmentDefinition>

@@ -11,8 +11,27 @@
     "country": "US"
   },
   "hobbies": [
-    { "hobby": "tennis" },
-    { "hobby": "soccer" },
-    { "hobby": "chess" }
+    {
+      "hobby": "tennis",
+      "skill": "professional",
+      "ranking": 1234,
+      "highestRanking": 12,
+      "status": "active",
+      "prizeMoney": 12500000,
+      "currencyCode": "USD"
+    },
+    {
+      "hobby": "soccer",
+      "skill": "professional",
+      "prizeMoney": 2500000,
+      "ranking": 5678,
+      "status": "retired",
+      "highestRanking": 36,
+      "currencyCode": "USD"
+    },
+    {
+      "hobby": "chess",
+      "skill": "amateur"
+    }
   ]
 }

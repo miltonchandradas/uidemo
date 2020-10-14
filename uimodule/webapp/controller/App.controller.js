@@ -1,28 +1,34 @@
-sap.ui.define(["com/sap/ui5demo/controller/BaseController"], function (
-  Controller
-) {
-  "use strict";
+sap.ui.define(
+  [
+    "com/sap/ui5demo/controller/BaseController",
+    "com/sap/ui5demo/formatter/Factory",
+  ],
+  function (Controller, factory) {
+    "use strict";
 
-  return Controller.extend("com.sap.ui5demo.controller.App", {
-    onInit: function () {},
+    return Controller.extend("com.sap.ui5demo.controller.App", {
+      factory: factory,
 
-    // onChange update valueState of input
-    onChange: function (oEvent) {
-      let oInput = oEvent.getSource();
-      let validEmail = this._validateInput(oInput.getValue());
-      let sValueState = "None";
+      onInit: function () {},
 
-      if (!validEmail) {
-        sValueState = "Error";
-      }
+      // onChange update valueState of input
+      onChange: function (oEvent) {
+        let oInput = oEvent.getSource();
+        let validEmail = this._validateInput(oInput.getValue());
+        let sValueState = "None";
 
-      oInput.setValueState(sValueState);
-    },
+        if (!validEmail) {
+          sValueState = "Error";
+        }
 
-    // PRIVATE FUNCTIONS
-    _validateInput: function (sValue) {
-      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(sValue).toLowerCase());
-    },
-  });
-});
+        oInput.setValueState(sValueState);
+      },
+
+      // PRIVATE FUNCTIONS
+      _validateInput: function (sValue) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(sValue).toLowerCase());
+      },
+    });
+  }
+);

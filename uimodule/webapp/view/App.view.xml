@@ -27,9 +27,12 @@
                 <Text text="{/address/country}"/>
 
                 <Label text="{i18n>hobbies}" class="sapUiMediumMarginTop"/>
-                <List items="{path: '/hobbies'}">
-                  <StandardListItem title="{hobby}"></StandardListItem>
-                </List>
+                <List items="{path: '/hobbies', factory: '.factory.hobbyFactory'}">
+										<dependents>
+											<core:Fragment fragmentName="com.sap.ui5demo.fragments.Amateur" type="XML"/>
+											<core:Fragment fragmentName="com.sap.ui5demo.fragments.Professional" type="XML"/>
+										</dependents>
+									</List>
               </l:VerticalLayout>
             </content>
 
