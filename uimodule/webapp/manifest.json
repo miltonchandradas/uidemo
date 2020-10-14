@@ -51,7 +51,11 @@
         "settings": {
           "bundleName": "com.sap.ui5demo.i18n.i18n"
         }
-      }
+      },
+      "": {
+        "type": "sap.ui.model.json.JSONModel",
+				"uri": "data/MyInfo.json"				
+			}
     },
     "resources": {
       "css": [
